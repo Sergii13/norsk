@@ -1,0 +1,103 @@
+.nf-how {
+  padding: 60px 0;
+  @media (max-width: $mobile) {
+    padding: 30px 0;
+  }
+  // .nf-how__container
+  &__container {
+  }
+  // .nf-how__row
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 83px;
+    @media (max-width: $tablet) {
+      gap: 24px 40px;
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(64);
+    }
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+      @media (max-width: $mobile) {
+        flex-direction: column;
+      }
+    }
+  }
+  // .nf-how__image-ibg
+  &__image-ibg {
+    width: 46.4%; /* 580/1250 */
+    flex-shrink: 0;
+    border-radius: 64px;
+    overflow: hidden;
+    padding-bottom: 39.76%; /* 497/1250 */
+    @media (max-width: $tablet) {
+      border-radius: 34px;
+    }
+    @media (max-width: $mobile) {
+      border-radius: 24px;
+      width: 100%;
+      padding-bottom: 100%;
+    }
+  }
+  // .nf-how__content
+  &__content {
+  }
+  // .nf-how__title
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+      @media (max-width: $tablet) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  // .nf-how__text
+  &__text {
+    & > * {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+    ul {
+      li {
+        padding-left: 33px;
+        position: relative;
+        &::before {
+          content: '';
+          width: 22px;
+          height: 21px;
+          position: absolute;
+          left: 0;
+          top: 3px;
+          background: url('@img/icons/heart.svg') center / contain no-repeat;
+        }
+        &:not(:last-child) {
+          margin-bottom: 20px;
+          @media (max-width: $tablet) {
+            margin-bottom: 16px;
+          }
+        }
+      }
+    }
+  }
+  // .nf-how__buttons
+  &__buttons {
+    display: flex;
+    margin-top: 40px;
+    gap: 16px;
+    @media (max-width: $mobile) {
+      margin-top: 24px;
+      gap: 6px;
+    }
+  }
+  // .nf-how__button
+  &__button {
+    @media (max-width: $mobileSmall) {
+      width: 100%;
+    }
+  }
+}

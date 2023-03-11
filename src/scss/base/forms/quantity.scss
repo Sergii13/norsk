@@ -1,0 +1,41 @@
+//<QUANTITY>
+// Сніппет (HTML): qa
+.nf-quantity {
+  width: 113px;
+  height: 31px;
+  display: flex;
+  border: 1px solid #d4e8d5;
+  background: #ffffff;
+  border-radius: 4px;
+  // .quantity__button
+  &__button {
+    flex: 0 0 37px;
+    position: relative;
+    cursor: pointer;
+    color: #20222e;
+    // .quantity__button_plus
+    &_plus {
+      &::before {
+        transform: rotate(-90deg);
+      }
+    }
+    // .quantity__button_minus
+    &_minus {
+      font-size: 25px;
+    }
+  }
+  // .quantity__input
+  &__input {
+    border-left: 1px solid #d4e8d5;
+    border-right: 1px solid #d4e8d5;
+
+    flex: 1 1 auto;
+    input {
+      height: 100%;
+      color: #20222e;
+      letter-spacing: 0.04em;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

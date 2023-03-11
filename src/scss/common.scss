@@ -1,0 +1,66 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.text_xl {
+  color: $textColor;
+  font-size: 24px;
+  line-height: math.div(32, 24);
+}
+.text_l {
+  color: $textColor;
+  font-size: 20px;
+  line-height: math.div(28, 20);
+  @media (max-width: $mobile) {
+    font-size: 18px;
+  }
+}
+.text_m {
+  color: $textColor;
+  font-size: 18px;
+  line-height: math.div(28, 18);
+}
+.text_n {
+  color: $textColor;
+  font-size: 16px;
+  line-height: math.div(24, 16);
+  @media (max-width: $mobile) {
+    font-size: 14px;
+  }
+}
+
+.text_s {
+  color: $textColor;
+  font-size: 14px;
+  line-height: math.div(20, 14);
+}
+.nf-title32 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: math.div(40, 32);
+  @media (max-width: $tablet) {
+    font-size: 28px;
+  }
+  @media (max-width: $mobile) {
+    font-size: 24px;
+  }
+}
+.nf-title {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: math.div(56, 48);
+  @media (max-width: $tablet) {
+    font-size: 40px;
+  }
+  @media (max-width: $mobile) {
+    font-size: 32px;
+  }
+}
+.nf-scrollbar {
+  height: 4px;
+  background: #c8dcd2;
+  border-radius: 2px;
+  margin-top: 24px;
+  .swiper-scrollbar-drag {
+    border-radius: 2px;
+    height: 4px;
+    background: $greenColor;
+  }
+}

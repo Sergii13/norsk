@@ -1,0 +1,161 @@
+.nf-gift-block {
+  padding: 72px 0;
+  background: #f2f9f2;
+  @media (max-width: $mobile) {
+    padding: 40px 0;
+  }
+  // .nf-gift-block__container
+  &__container {
+  }
+  // .nf-gift-block__title
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 26px;
+    }
+  }
+  // .nf-gift-block__slider
+  &__slider {
+    .nf-scrollbar {
+      @media (min-width: $mobile) {
+        display: none;
+      }
+    }
+    &.swiper {
+      overflow: visible;
+    }
+  }
+  // .nf-gift-block__wrapper
+  &__wrapper {
+    &.swiper-wrapper {
+      @media (min-width: $mobile) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      @media (max-width: $tablet) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+  // .nf-gift-block__slide
+  &__slide {
+    @media (max-width: $mobile) {
+      width: 317px !important;
+    }
+  }
+  // .nf-gift-block__card
+  &__card {
+  }
+  // .nf-gift-block__button-wrap
+  &__button-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    @media (max-width: $mobile) {
+      margin-top: 24px;
+    }
+  }
+  // .nf-gift-block__button
+  &__button {
+    min-width: 213px;
+    @media (max-width: $mobileSmall) {
+      width: 100%;
+    }
+  }
+}
+
+.nf-card-gift {
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 2px solid transparent;
+  transition: all 0.5s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+  box-shadow: 8px 8px 30px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  box-sizing: border-box;
+  &:hover {
+    border: 2px solid #8ac290;
+  }
+  // .nf-card-gift__tags
+  &__tags {
+    position: absolute;
+    z-index: 2;
+    top: 16px;
+    left: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    @media (max-width: $mobile) {
+      top: 12px;
+      left: 12px;
+    }
+    span {
+      font-size: 14px;
+      padding: 0px 16px;
+      display: inline-block;
+      background: $orangeColor;
+      color: #fff;
+      border-radius: 12px;
+      line-height: math.div(30, 14);
+    }
+  }
+  // .nf-card-gift__image-ibg
+  &__image-ibg {
+    padding-bottom: 59%; /* 236/400 */
+    @media (max-width: $mobile) {
+      height: 195px;
+    }
+  }
+  // .nf-card-gift__content
+  &__content {
+    padding: 16px 32px 24px 28px;
+    background: #fff;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: $mobile) {
+      padding: 16px 20px 20px;
+    }
+  }
+  // .nf-card-gift__top
+  &__top {
+    flex: 1 1 auto;
+    margin-bottom: 20px;
+    @media (max-width: $mobile) {
+      margin-bottom: 24px;
+    }
+  }
+  // .nf-card-gift__label
+  &__label {
+    font-size: 14px;
+    color: $greenColor;
+    &:not(:last-child) {
+      margin-bottom: rem(8);
+    }
+  }
+  // .nf-card-gift__title
+  &__title {
+    display: block;
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 133.333333%; /* 32/24 */
+    @media (max-width: $mobile) {
+      font-size: 20px;
+    }
+    &:hover {
+      color: $greenColor;
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(12);
+    }
+  }
+  // .nf-card-gift__text
+  &__text {
+  }
+  // .nf-card-gift__button
+  &__button {
+  }
+}
