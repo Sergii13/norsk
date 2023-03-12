@@ -42,6 +42,17 @@
     font-size: 24px;
   }
 }
+.nf-title-big {
+  font-weight: 500;
+  font-size: 56px;
+  line-height: math.div(64, 56);
+  @media (max-width: $tablet) {
+    font-size: 50px;
+  }
+  @media (max-width: $mobile) {
+    font-size: 40px;
+  }
+}
 .nf-title {
   font-weight: 500;
   font-size: 48px;

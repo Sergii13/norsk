@@ -1,0 +1,196 @@
+.nf-article {
+  padding: 56px 0 120px;
+  @media (max-width: $mobile) {
+    padding: 0 0 64px;
+  }
+  // .nf-article__container
+  &__container {
+  }
+  // .nf-article__head
+  &__head {
+    max-width: 620px;
+    text-align: center;
+    margin: 0 auto;
+    @media (max-width: $mobile) {
+      text-align: left;
+      font-size: 18px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 64px;
+      @media (max-width: $mobile) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  // .nf-article__title
+  &__title {
+    margin-bottom: 16px;
+    @media (max-width: $mobile) {
+      margin-bottom: 8px;
+    }
+  }
+  // .nf-article__head-text
+  &__head-text {
+  }
+  // .nf-article__image
+  &__image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 63px;
+    @media (max-width: $mobile) {
+      width: calc(100% + 32px);
+      margin: 0 -16px;
+      margin-bottom: 40px;
+    }
+  }
+  // .nf-article__wrap
+  &__wrap {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  // .nf-article__title2
+  &__title2 {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: math.div(56, 48);
+    @media (max-width: $mobile) {
+      font-size: 32px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 20px;
+      @media (max-width: $mobile) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  // .nf-article__text
+  &__text {
+    @media (max-width: $mobile) {
+      font-size: 16px;
+    }
+    ul {
+      margin-bottom: 22px;
+      @media (max-width: $mobile) {
+        margin-bottom: 33px;
+      }
+      li {
+        &:not(:last-child) {
+          margin-bottom: 18px;
+          @media (max-width: $mobile) {
+            margin-bottom: 16px;
+          }
+        }
+        padding-left: 18px;
+        position: relative;
+        @media (max-width: $mobile) {
+          padding-left: 15px;
+        }
+        &::after {
+          width: 6px;
+          height: 6px;
+          background: #57575a;
+          top: 10px;
+          left: 0;
+          border-radius: 50%;
+          content: '';
+          position: absolute;
+          @media (max-width: $mobile) {
+            display: none;
+          }
+        }
+      }
+    }
+    p {
+      &:not(:last-child) {
+        margin-bottom: 26px;
+        @media (max-width: $mobile) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  // .nf-article__button
+  &__button {
+    margin-top: 25px;
+    @media (max-width: $mobile) {
+      margin-top: 16px;
+    }
+  }
+  iframe {
+    display: block;
+    margin: 40px 0;
+    @media (max-width: $mobile) {
+      margin: 32px 0;
+    }
+    @media (max-width: $mobileSmall) {
+      height: 191px !important;
+    }
+  }
+  // .nf-article__text-green
+  &__text-green {
+    margin: 40px 0;
+    border-radius: 8px;
+    background: #f2f9f2;
+    padding: 42px 60px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: math.div(32, 24);
+    color: $greenColor;
+    text-align: center;
+    @media (max-width: $mobile) {
+      margin: 32px 0;
+      padding: 25px;
+      font-size: 18px;
+    }
+  }
+  // .nf-article__title3
+  &__title3 {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: math.div(48, 40);
+    @media (max-width: $mobile) {
+      font-size: 20px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 14px;
+      @media (max-width: $mobile) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  // .nf-article__image2
+  &__image2 {
+    margin: 30px 0 48px;
+    @media (max-width: $mobile) {
+      margin: 32px 0;
+    }
+  }
+  // .nf-article__image-descr
+  &__image-descr {
+    font-size: 14px;
+    line-height: math.div(20, 14);
+    color: #57575a;
+    margin-top: 8px;
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+  // .nf-article__title4
+  &__title4 {
+    margin: 38px 0 15px;
+    @media (max-width: $mobile) {
+      margin: 30px 0 8px;
+    }
+  }
+  // .nf-article__title-small
+  &__title-small {
+    margin: 62px 0 16px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: math.div(32, 24);
+    @media (max-width: $mobile) {
+      margin: 30px 0 8px;
+      font-size: 20px;
+    }
+  }
+}
