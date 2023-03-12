@@ -1,0 +1,110 @@
+.nf-tema {
+  padding-bottom: 40px;
+  @media (max-width: $mobile) {
+    padding-bottom: 20px;
+  }
+  // .nf-tema__container
+  &__container {
+  }
+  // .nf-tema__row
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 96px;
+    @media (max-width: $pc) {
+      gap: 40px;
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+  // .nf-tema__image-ibg
+  &__image-ibg {
+    width: 45.76%; /* 572/1250 */
+    flex-shrink: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    padding-bottom: 29.92%; /* 374/1250 */
+    @media (max-width: $mobile) {
+      padding-bottom: 68.8%; /* 258/375 */
+      width: calc(100% + 32px);
+      margin: 0 -16px;
+      border-radius: 0px;
+    }
+  }
+  // .nf-tema__content
+  &__content {
+  }
+  // .nf-tema__title
+  &__title {
+    margin-bottom: 12px;
+  }
+  // .nf-tema__text
+  &__text {
+    position: relative;
+    @media (max-width: $mobile) {
+      font-size: 16px;
+    }
+    &._showmore-active {
+      &::after {
+        content: '';
+        opacity: 0;
+      }
+    }
+    &::after {
+      content: '';
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      background: linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.96) 73.74%,
+        #fff 100%
+      );
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+      height: 133px;
+    }
+    p {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  // .nf-tema__text-wrap
+  &__text-wrap {
+    padding-bottom: 16px;
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    // @media (max-width: $mobile) {
+    //   max-height: 93px;
+    //   ._showmore-active & {
+    //     max-height: 100%;
+    //   }
+    // }
+  }
+  &__more-button {
+    position: relative;
+    z-index: 2;
+    color: $greenLightColor;
+    font-weight: 500;
+    text-decoration: underline;
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    &:hover {
+      color: $greenColor;
+    }
+    span {
+      &:nth-child(1) {
+        ._showmore-active & {
+          display: none;
+        }
+      }
+      &:nth-child(2) {
+        display: none;
+        ._showmore-active & {
+          display: block;
+        }
+      }
+    }
+  }
+}

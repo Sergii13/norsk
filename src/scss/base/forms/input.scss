@@ -12,10 +12,19 @@ textarea {
   border-radius: 0 !important;
   width: 100%;
   display: block;
-  padding: 0px 20px;
-  border: 1px solid #eee;
+  padding: 0px 16px;
+  height: 46px;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #d4e8d5;
+  letter-spacing: 0.04em;
+  color: #20222e;
+  &::placeholder {
+    color: #57575a;
+  }
   &._form-focus {
     outline: none;
+    border: 1px solid $greenLightColor;
   }
   &._form-error {
   }
@@ -29,7 +38,12 @@ textarea {
   }
 }
 
-textarea.input {
-  resize: none;
-  padding: 0px 0px;
+textarea.nf-input {
+  padding: 16px;
+  min-height: 180px;
+  height: auto;
+  display: block;
+  @media (max-width: $mobile) {
+    min-height: 190px;
+  }
 }

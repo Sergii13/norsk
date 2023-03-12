@@ -1,0 +1,24 @@
+.nf-cards {
+  padding: 40px 0 96px;
+  @media (max-width: $mobile) {
+    padding: 32px 0 40px;
+  }
+  // .nf-cards__container
+  &__container {
+  }
+  // .nf-cards__grid-layout
+  &__grid-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $mobile) {
+      gap: 16px;
+    }
+    @media (max-width: em(600)) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

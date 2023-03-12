@@ -97,6 +97,7 @@
   position: relative;
   display: flex;
   align-items: flex-end;
+  overflow: hidden;
   color: #fff;
   transition: all 0.7s cubic-bezier(0.5, 0.02, 0.13, 0.5);
   @media (max-width: $mobile) {
@@ -161,6 +162,7 @@
   &__title {
     font-weight: 500;
     font-size: 24px;
+    word-break: break-word;
     line-height: math.div(32, 24);
     margin-bottom: 4px;
     transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);

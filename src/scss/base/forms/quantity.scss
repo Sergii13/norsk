@@ -7,6 +7,14 @@
   border: 1px solid #d4e8d5;
   background: #ffffff;
   border-radius: 4px;
+  flex-shrink: 0;
+  &_big {
+    width: 124px;
+    height: 46px;
+    .nf-quantity__button {
+      flex: 0 0 40px;
+    }
+  }
   // .quantity__button
   &__button {
     flex: 0 0 37px;

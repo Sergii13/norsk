@@ -1,59 +1,148 @@
 .options {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	// .options__item
-	&__item {
-		position: relative;
-		cursor: pointer;
-		&:not(:last-child) {
-			margin-bottom: em(5);
-		}
-	}
-	// .options__input
-	&__input {
-		width: 0;
-		height: 0;
-		opacity: 0;
-		position: absolute;
-		&:focus + .options__label:before {
-			box-shadow: 0 0 5px #000;
-		}
-		&:checked + .options__label:before {
-		}
-		&:checked + .options__label:after {
-			transform: scale(1);
-		}
-	}
-	// .options__label
-	&__label {
-		display: inline-flex;
-		align-items: center;
-		cursor: pointer;
-		gap: 10px;
-		&:before {
-			content: "";
-			align-self: flex-start;
-			width: 20px;
-			height: 20px;
-			flex: 0 0 20px;
-			border-radius: 50%;
-			border: 1px solid #a7a9ac;
-		}
-		&:after {
-			content: "";
-			transition: all 0.3s ease 0s;
-			transform: scale(0);
-			width: 10px;
-			height: 10px;
-			border-radius: 50%;
-			background-color: #77243a;
-			position: absolute;
-			left: 5px;
-			top: 5px;
-		}
-	}
-	// .options__text
-	&__text {
-	}
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  // .options__item
+  &__item {
+    position: relative;
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-bottom: em(5);
+    }
+  }
+  // .options__input
+  &__input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    &:focus + .options__label:before {
+      box-shadow: 0 0 5px #000;
+    }
+    &:checked + .options__label:before {
+    }
+    &:checked + .options__label:after {
+      transform: scale(1);
+    }
+  }
+  // .options__label
+  &__label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+    &:before {
+      content: '';
+      align-self: flex-start;
+      width: 20px;
+      height: 20px;
+      flex: 0 0 20px;
+      border-radius: 50%;
+      border: 1px solid #a7a9ac;
+    }
+    &:after {
+      content: '';
+      transition: all 0.3s ease 0s;
+      transform: scale(0);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #77243a;
+      position: absolute;
+      left: 5px;
+      top: 5px;
+    }
+  }
+  // .options__text
+  &__text {
+  }
+}
+.nf-type-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  // .nf-type-options__item
+  &__item {
+    @media (max-width: $mobileSmall) {
+      width: calc(50% - 4px);
+    }
+  }
+  // .nf-type-options__input
+  &__input {
+    &:focus + .options__label:before {
+      box-shadow: 0 0 5px #000;
+    }
+    &:checked + .nf-type-options__label .nf-type-options__text {
+      color: #fff;
+    }
+    &:checked + .nf-type-options__label {
+      background: $greenColor;
+    }
+    &:checked + .nf-type-options__label .nf-type-options__circle {
+      background: #f2f9f2 url('@img/icons/check-ok.svg') center left 5px / 8px
+        8px no-repeat;
+    }
+  }
+  // .nf-type-options__label
+  &__label {
+    cursor: pointer;
+    background: #f2f9f2;
+    border-radius: 8px;
+    padding: 13px 16px 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    @media (max-width: $mobileSmall) {
+      width: 100%;
+    }
+  }
+  // .nf-type-options__circle
+  &__circle {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid $greenColor;
+    border-radius: 50%;
+  }
+  // .nf-type-options__text
+  &__text {
+    font-weight: 500;
+    color: $greenColor;
+    line-height: math.div(18, 16);
+  }
+}
+.nf-options-kg {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  // .nf-options-kg__item
+  &__item {
+  }
+  // .nf-options-kg__input
+  &__input {
+    &:checked + .nf-options-kg__label .nf-options-kg__text {
+      color: #fff;
+    }
+    &:checked + .nf-options-kg__label {
+      background: $greenLightColor;
+    }
+  }
+  // .nf-options-kg__label
+  &__label {
+    display: inline-flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    min-width: 81px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    height: 46px;
+    background: #fff;
+    border: 1px solid #d4e8d5;
+  }
+  // .nf-options-kg__text
+  &__text {
+    color: #20222e;
+  }
 }

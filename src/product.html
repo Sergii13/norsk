@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/_head.htm',{ "title":"NF Symbolske gaver - Produktsside " })
+
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+        <div class="nf-breadcrumbs">
+          <div class="nf-breadcrumbs__container">
+            <ul class="nf-breadcrumbs__list">
+              <li class="nf-breadcrumbs__item">
+                <a href="" class="nf-breadcrumbs__link"> Hjem </a>
+              </li>
+              <li class="nf-breadcrumbs__item">
+                <a href="" class="nf-breadcrumbs__link"> Tema </a>
+              </li>
+              <li class="nf-breadcrumbs__item">
+                <a href="" class="nf-breadcrumbs__link"> Mineopprydding </a>
+              </li>
+              <li class="nf-breadcrumbs__item">
+                <span class="nf-breadcrumbs__current">
+                  Minefri fotballbane</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        @@include('html/blocks/_product-block.htm',{ })
+        @@include('html/blocks/_item2-block.htm',{ "class":"nf-product-item"})
+        @@include('html/blocks/_info-block.htm',{ })
+        @@include('html/blocks/_gift-block2.htm',{ "title":"Relaterte gaver" })
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>

@@ -1,0 +1,106 @@
+.nf-tema2 {
+  padding: 72px 0;
+  background: #f2f9f2;
+  @media (max-width: $mobile) {
+    padding: 40px 0;
+    background: #e7f5e8;
+  }
+  // .nf-tema2__container
+  &__container {
+  }
+  // .nf-tema2__row
+  &__row {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    @media (max-width: $tablet) {
+      gap: 20px;
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+  // .nf-tema2__content
+  &__content {
+    width: 264px;
+    flex-shrink: 0;
+    @media (max-width: $tablet) {
+      width: 220px;
+    }
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+  // .nf-tema2__title
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(8);
+    }
+  }
+  // .nf-tema2__text
+  &__text {
+  }
+  // .nf-tema2__slider
+  &__slider {
+    min-width: 0;
+    @media (max-width: $mobile) {
+      max-width: 100%;
+      overflow: visible !important;
+    }
+  }
+  // .nf-tema2__wrapper
+  &__wrapper {
+  }
+  // .nf-tema2__slide
+  &__slide {
+    @media (max-width: $mobile) {
+      width: 317px !important;
+    }
+    .nf-team-card {
+      height: 350px;
+      @media (max-width: $mobile) {
+        height: 425px;
+      }
+    }
+  }
+  // .nf-tema2__row-swiper
+  &__row-swiper {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-top: 20px;
+    @media (max-width: $mobile) {
+      margin-top: 24px;
+    }
+  }
+  // .nf-tema2__scrollbar
+  &__scrollbar {
+    margin-top: 0;
+    flex: 1 1 auto;
+  }
+  .nf-arrows {
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+  // .nf-tema2__prev
+  &__prev {
+  }
+  // .nf-tema2__next
+  &__next {
+  }
+  &__button-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    @media (min-width: $mobile) {
+      display: none;
+    }
+  }
+  &__button {
+    @media (max-width: $mobileSmall) {
+      width: 100%;
+    }
+  }
+}

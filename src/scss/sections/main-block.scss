@@ -1,6 +1,9 @@
 .nf-main-block {
   background: #e7f5e8;
   position: relative;
+  @media (max-width: $mobile) {
+    margin-top: 8px;
+  }
   // .nf-main-block__container
 
   // .nf-main-block__content

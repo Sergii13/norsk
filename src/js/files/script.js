@@ -21,3 +21,22 @@ window.addEventListener('load', () => {
     }
   });
 });
+
+const allInputType = document.querySelectorAll('.nf-type-options__input');
+if (allInputType) {
+  const parentBlock = document.querySelector('.nf-product');
+  allInputType.forEach((item) => {
+    if (item.value === 'digitalt') {
+      parentBlock.classList.add('active');
+    } else {
+      parentBlock.classList.remove('active');
+    }
+    item.addEventListener('change', (e) => {
+      if (e.target.value === 'digitalt') {
+        parentBlock.classList.add('active');
+      } else {
+        parentBlock.classList.remove('active');
+      }
+    });
+  });
+}

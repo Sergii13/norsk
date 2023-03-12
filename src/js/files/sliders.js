@@ -7,7 +7,7 @@
 // Підключаємо слайдер Swiper з node_modules
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
-import Swiper, { Navigation, Scrollbar } from 'swiper';
+import Swiper, { Navigation, Scrollbar, Thumbs } from 'swiper';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -102,6 +102,218 @@ function initSliders() {
       on: {},
     });
   }
+  let thumbs;
+  if (document.querySelector('.nf-product-thumb__slider')) {
+    // Вказуємо склас потрібного слайдера
+    // Створюємо слайдер
+    thumbs = new Swiper('.nf-product-thumb__slider', {
+      // Вказуємо склас потрібного слайдера
+      // Підключаємо модулі слайдера
+      // для конкретного випадку
+      modules: [Navigation],
+      observer: true,
+      observeParents: true,
+      slidesPerView: 5,
+      spaceBetween: 8,
+      autoHeight: true,
+      speed: 800,
+
+      //touchRatio: 0,
+      //simulateTouch: false,
+      //loop: true,
+      //preloadImages: false,
+      //lazy: true,
+
+      /*
+			  // Ефекти
+			  effect: 'fade',
+			  autoplay: {
+				  delay: 3000,
+				  disableOnInteraction: false,
+			  },
+			  */
+
+      // Пагінація
+      /*
+			  pagination: {
+				  el: '.swiper-pagination',
+				  clickable: true,
+			  },
+			  */
+
+      // Скроллбар
+      /*
+			  scrollbar: {
+				  el: '.swiper-scrollbar',
+				  draggable: true,
+			  },
+			  */
+
+      // Кнопки "вліво/вправо"
+      /*
+			  // Брейкпоінти
+			  breakpoints: {
+				  640: {
+					  slidesPerView: 1,
+					  spaceBetween: 0,
+					  autoHeight: true,
+				  },
+				  768: {
+					  slidesPerView: 2,
+					  spaceBetween: 20,
+				  },
+				  992: {
+					  slidesPerView: 3,
+					  spaceBetween: 20,
+				  },
+				  1268: {
+					  slidesPerView: 4,
+					  spaceBetween: 30,
+				  },
+			  },
+			  */
+      // Події
+      on: {},
+    });
+  }
+  if (document.querySelector('.nf-product__slider')) {
+    // Вказуємо склас потрібного слайдера
+    // Створюємо слайдер
+    new Swiper('.nf-product__slider', {
+      // Вказуємо склас потрібного слайдера
+      // Підключаємо модулі слайдера
+      // для конкретного випадку
+      modules: [Navigation, Thumbs, Scrollbar],
+      observer: true,
+      observeParents: true,
+      slidesPerView: 1,
+      spaceBetween: 16,
+      autoHeight: true,
+      speed: 800,
+
+      //touchRatio: 0,
+      //simulateTouch: false,
+      //loop: true,
+      //preloadImages: false,
+      //lazy: true,
+
+      /*
+			  // Ефекти
+			  effect: 'fade',
+			  autoplay: {
+				  delay: 3000,
+				  disableOnInteraction: false,
+			  },
+			  */
+
+      // Пагінація
+      /*
+			  pagination: {
+				  el: '.swiper-pagination',
+				  clickable: true,
+			  },
+			  */
+
+      // Скроллбар
+
+      scrollbar: {
+        el: '.nf-product__scrollbar',
+        draggable: true,
+      },
+
+      thumbs: {
+        swiper: thumbs,
+      },
+      // Кнопки "вліво/вправо"
+      navigation: {
+        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+      },
+
+      // Брейкпоінти
+      breakpoints: {
+        320: {
+          slidesPerView: 'auto',
+          spaceBetween: 16,
+        },
+        992: {
+          slidesPerView: 1,
+        },
+      },
+
+      // Події
+      on: {},
+    });
+  }
+  if (document.querySelector('.nf-tema2__slider')) {
+    // Вказуємо склас потрібного слайдера
+    // Створюємо слайдер
+    new Swiper('.nf-tema2__slider', {
+      // Вказуємо склас потрібного слайдера
+      // Підключаємо модулі слайдера
+      // для конкретного випадку
+      modules: [Navigation, Scrollbar],
+      observer: true,
+      observeParents: true,
+      slidesPerView: 3,
+      spaceBetween: 20,
+      speed: 800,
+      //touchRatio: 0,
+      //simulateTouch: false,
+      //loop: true,
+      //preloadImages: false,
+      //lazy: true,
+
+      /*
+			  // Ефекти
+			  effect: 'fade',
+			  autoplay: {
+				  delay: 3000,
+				  disableOnInteraction: false,
+			  },
+			  */
+
+      // Пагінація
+      /*
+			  pagination: {
+				  el: '.swiper-pagination',
+				  clickable: true,
+			  },
+			  */
+
+      // Скроллбар
+
+      scrollbar: {
+        el: '.nf-tema2__scrollbar',
+        draggable: true,
+      },
+
+      // Кнопки "вліво/вправо"
+      navigation: {
+        prevEl: '.nf-tema2__prev',
+        nextEl: '.nf-tema2__next',
+      },
+
+      // Брейкпоінти
+      breakpoints: {
+        320: {
+          slidesPerView: 'auto',
+          spaceBetween: 16,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        991: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      },
+
+      // Події
+      on: {},
+    });
+  }
 }
 // Ініціалізація слайдерів
 let mySwiper, mySwiper2;
@@ -120,7 +332,6 @@ function initSlidersBreakpoint() {
       observeParents: true,
       slidesPerView: 'auto',
       spaceBetween: 16,
-      autoHeight: true,
       speed: 800,
       scrollbar: {
         el: '.nf-gift-block__scrollbar',
@@ -200,7 +411,6 @@ function initSlidersBreakpoint() {
       observeParents: true,
       slidesPerView: 'auto',
       spaceBetween: 16,
-      autoHeight: true,
       speed: 800,
       scrollbar: {
         el: '.nf-team__scrollbar',
