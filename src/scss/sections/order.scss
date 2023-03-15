@@ -1,0 +1,319 @@
+.nf-order {
+  padding: 65px 0 90px;
+  @media (max-width: $mobile) {
+    padding: 35px 0 56px;
+  }
+  // .nf-order__container
+  &__container {
+  }
+  &__button-wrap {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 32px;
+    @media (max-width: $mobile) {
+      margin-top: 24px;
+    }
+  }
+  &__button {
+    background: $greenLightColor;
+    @media (max-width: $mobileSmall) {
+      width: 100%;
+    }
+  }
+  // .nf-order__row
+  &__row {
+    display: flex;
+    align-items: flex-start;
+    gap: 64px;
+    @media (max-width: $pc) {
+      gap: 30px;
+    }
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      gap: 48px;
+    }
+  }
+  // .nf-order__main
+  &__main {
+    flex: 1 1 auto;
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
+  }
+  // .nf-order__steps
+  &__steps {
+  }
+  // .nf-order__step
+  &__step {
+  }
+  // .nf-order__info
+  &__info {
+  }
+}
+.nf-order-step {
+  padding: 28px 0;
+  border-bottom: 1px solid #e8e8e8;
+  display: flex;
+  gap: 26px;
+  align-items: flex-start;
+  @media (max-width: $mobile) {
+    padding: 20px 0;
+    gap: 0px;
+    position: relative;
+  }
+  &:first-child {
+    border-top: 1px solid #e8e8e8;
+  }
+  // .nf-order-step_active
+  &_active {
+    .nf-order-step__digit {
+      background: $greenColor;
+      color: #fff;
+    }
+  }
+  &_complete {
+    .nf-order-step__digit {
+      background: #f2f9f2;
+      color: $greenColor;
+    }
+  }
+  // .nf-order-step_not-complete
+  &_not-complete {
+    .nf-order-step__digit {
+      background: #eeeef0;
+      color: #a8a8ac;
+    }
+    .nf-order-step__title {
+      color: #a8a8ac;
+    }
+  }
+  // .nf-order-step__digit
+  &__digit {
+    min-width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 14px;
+    border-radius: 50%;
+    padding: 0 4px;
+    transform: translateY(4px);
+    @media (max-width: $mobile) {
+      position: absolute;
+      left: 0;
+      top: 20px;
+    }
+  }
+  // .nf-order-step__content
+  &__content {
+    flex: 1 1 auto;
+  }
+  // .nf-order-step__head
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    @media (max-width: $mobileSmall) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &:not(:last-child) {
+      margin-bottom: 16px;
+      @media (max-width: $mobile) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+  &__link {
+    text-decoration: underline;
+    line-height: math.div(24, 16);
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    &:hover {
+      color: $greenColor;
+    }
+  }
+  // .nf-order-step__title
+  &__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: math.div(30, 20);
+    @media (max-width: $mobile) {
+      text-indent: 36px;
+    }
+  }
+  .nf-type-options__label {
+    min-width: 142px;
+    @media (max-width: $mobileSmall) {
+      min-width: 100%;
+    }
+  }
+  // .nf-order-step__descr
+  &__descr {
+    margin-bottom: 16px;
+    line-height: math.div(24, 16);
+    color: #57575a;
+    @media (max-width: $mobile) {
+      margin-bottom: 20px;
+    }
+  }
+}
+.nf-type-options {
+  // .nf-type-options__item
+  &__item {
+  }
+  // .nf-type-options__input
+  &__input {
+  }
+  // .nf-type-options__label
+  &__label {
+  }
+  // .nf-type-options__circle
+  &__circle {
+  }
+  // .nf-type-options__text
+  &__text {
+  }
+}
+
+.nf-order-info {
+  width: 360px;
+  flex-shrink: 0;
+  @media (max-width: $pc) {
+    width: 300px;
+  }
+  @media (max-width: $tablet) {
+    width: 100%;
+  }
+  // .nf-order-info__label
+  &__label {
+    font-size: rem(18);
+    line-height: math.div(30, 18);
+    @media (max-width: $tablet) {
+      display: none;
+    }
+    &:not(:last-child) {
+      margin-bottom: 11px;
+    }
+  }
+  // .nf-order-info__wrap
+  &__wrap {
+    padding: 20px 24px 20px 20px;
+    background: #f2f9f2;
+    border-radius: 8px;
+    @media (max-width: $tablet) {
+      padding: 20px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+  // .nf-order-info__title
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: math.div(28, 18);
+    margin-bottom: 12px;
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+  &__title-mob {
+    margin-bottom: 12px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: math.div(30, 20);
+    @media (min-width: $tablet) {
+      display: none;
+    }
+  }
+  // .nf-order-info__items
+  &__items {
+    display: grid;
+    gap: 14px;
+  }
+  // .nf-order-info__item
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    color: #010f25;
+    line-height: math.div(24, 16);
+  }
+  // .nf-order-info__left
+  &__left {
+  }
+  // .nf-order-info__right
+  &__right {
+    font-weight: 500;
+  }
+  // .nf-order-info__total
+  &__total {
+    padding: 17px 24px;
+    background: #f2f9f2;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    color: #010f25;
+    font-weight: 500;
+    line-height: math.div(24, 16);
+  }
+  // .nf-order-info__total-left
+  &__total-left {
+  }
+  // .nf-order-info__total-right
+  &__total-right {
+  }
+}
+
+.nf-form-step {
+  // .nf-form-step__item
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+  // .nf-form-step__label
+  &__label {
+  }
+  // .nf-form-step__label-text
+  &__label-text {
+    letter-spacing: 0.04em;
+    color: #0f0b14;
+    margin-bottom: 8px;
+    display: block;
+  }
+  // .nf-form-step__input
+  &__input {
+    &.nf-input {
+      border-radius: 4px;
+      border: 1px solid #d0d1d4;
+      padding: 0 12px;
+      height: 49px;
+      &._form-focus {
+        border: 1px solid #1d8747;
+      }
+    }
+  }
+  // .nf-form-step__row
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    @media (max-width: em(550)) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0px;
+      margin-bottom: 24px;
+    }
+  }
+
+  // .nf-form-step__checkboxes
+  &__checkboxes {
+    display: grid;
+    gap: 17px;
+  }
+}

@@ -47,6 +47,12 @@
   &__wrap {
     max-width: 720px;
     margin: 0 auto;
+    &.nf-module {
+      padding: 120px 0;
+      @media (max-width: $mobile) {
+        padding: 40px 0 56px;
+      }
+    }
   }
   // .nf-article__title2
   &__title2 {

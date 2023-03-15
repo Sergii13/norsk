@@ -1,0 +1,18 @@
+.nf-search {
+  padding: 23px 0 87px;
+  @media (max-width: $mobile) {
+    padding: 0px 0 40px;
+  }
+  // .nf-search__container
+  &__container {
+  }
+  // .nf-search__title
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 58px;
+      @media (max-width: $mobile) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

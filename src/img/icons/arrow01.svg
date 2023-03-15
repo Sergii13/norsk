@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="29.354" height="24.847" viewBox="0 0 29.354 24.847">
+  <defs>
+    <filter id="Контур_242" x="0" y="0" width="29.354" height="24.847" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.051"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Контур_242)">
+    <path id="Контур_242-2" data-name="Контур 242" d="M0,9.235,5.037,4.617,0,0" transform="translate(19.29 10.06) rotate(90)" fill="none" stroke="#767676" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+</svg>

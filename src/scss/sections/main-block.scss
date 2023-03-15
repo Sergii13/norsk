@@ -1,8 +1,31 @@
 .nf-main-block {
   background: #e7f5e8;
   position: relative;
-  @media (max-width: $mobile) {
-    margin-top: 8px;
+
+  &_module {
+    .nf-main-block__button {
+      flex: 0 0 auto;
+      padding: 0 32px;
+    }
+  }
+  &_reverse {
+    .nf-main-block__image-ibg {
+      right: 100%;
+      left: auto;
+      @media (max-width: $tablet) {
+        right: 16px;
+      }
+    }
+    .nf-main-block__content {
+      margin-left: auto;
+      padding: 177px 0px 177px 116px;
+      @media (max-width: $pc) {
+        padding: 100px 0px 100px 30px;
+      }
+      @media (max-width: $tablet) {
+        padding: 50px 0 0px;
+      }
+    }
   }
   // .nf-main-block__container
 
@@ -52,12 +75,14 @@
   &__buttons {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: rem(8);
   }
   // .nf-main-block__button
   &__button {
-    flex: 1 1 auto;
-    padding: 0 14px;
+    @media (max-width: $mobileSmall) {
+      padding: 0 20px;
+    }
   }
   // .nf-main-block__image-ibg
   &__image-ibg {

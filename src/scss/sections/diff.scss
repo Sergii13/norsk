@@ -1,0 +1,132 @@
+.nf-diff {
+  padding: 95px 0;
+  background: #e7f5e8;
+  @media (max-width: $tablet) {
+    padding: 40px 0;
+  }
+  &_green {
+    background: $greenLightColor;
+    color: #fff;
+    .nf-diff__row {
+      flex-direction: row-reverse;
+      @media (max-width: $mobile) {
+        flex-direction: column-reverse;
+        gap: 40px;
+      }
+    }
+    .nf-diff__descr {
+      color: #e7f5e8;
+    }
+    .nf-diff__icon {
+      svg {
+        fill: #f2f9f2;
+      }
+    }
+    .nf-diff__text {
+      color: #e7f5e8;
+    }
+    .nf-diff__image-ibg {
+      transform: scaleX(-1);
+    }
+  }
+  // .nf-diff__container
+  &__container {
+  }
+  &__descr {
+    margin-bottom: 24px;
+    @media (min-width: $mobile) {
+      display: none;
+    }
+  }
+  // .nf-diff__row
+  &__row {
+    gap: 102px;
+    display: flex;
+    align-items: flex-start;
+    @media (max-width: $pc) {
+      gap: 40px;
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+  // .nf-diff__image-ibg
+  &__image-ibg {
+    border-radius: 24px;
+    overflow: hidden;
+    flex-shrink: 0;
+    width: 44.96%; /* 562/1250 */
+    padding-bottom: 49.36%; /* 617/1250 */
+
+    @media (max-width: $mobile) {
+      width: 100%;
+      padding-bottom: 100%;
+    }
+  }
+  // .nf-diff__content
+  &__content {
+  }
+  // .nf-diff__title
+  &__title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: math.div(48, 40);
+    @media (max-width: $tablet) {
+      font-size: 32px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 40px;
+      @media (max-width: $tablet) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  // .nf-diff__items
+  &__items {
+    display: grid;
+    gap: 40px;
+    @media (max-width: $pc) {
+      gap: 24px;
+    }
+  }
+  // .nf-diff__item
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    @media (max-width: $mobile) {
+      gap: 17px;
+    }
+  }
+  // .nf-diff__icon
+  &__icon {
+    width: 25px;
+    flex-shrink: 0;
+    fill: $greenLightColor;
+  }
+  // .nf-diff__item-content
+  &__item-content {
+  }
+  // .nf-diff__item-title
+  &__item-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: math.div(32, 24);
+    @media (max-width: $mobile) {
+      font-size: 18px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 12px;
+      @media (max-width: $mobile) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  // .nf-diff__text
+  &__text {
+    @media (max-width: $mobile) {
+      font-size: 16px;
+    }
+  }
+}
